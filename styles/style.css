@@ -1,1 +1,124 @@
+body {
+    font-family: monospace;
+}
 
+header img {
+    width: 99%;
+    object-fit: cover;
+    border: 2px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+
+.topnav {
+    text-align: center;
+    margin-top: 10px;
+    font-size:20px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 20px;
+    
+}
+
+.topnav a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #e6e3e3;
+    transition: .2s;
+}
+
+.topnav a:hover {
+    transition: .2s;
+    border:1px solid rgb(212, 203, 38);
+    background-color: #262626;
+    color:white
+    
+}
+
+.batman h1 {
+    text-align: center;
+    font-size: 30px;
+}
+.batman img {
+    width:30%;
+    height:auto;
+}
+
+.characters h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#character-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px; 
+    justify-content: center;
+    
+}
+#character-list li {
+    border: 1px solid #000000;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #e6e3e3;
+    border-radius: 8px;
+    width:85%;
+    min-height: 20%;
+    max-height: 20%;
+    
+}
+#character-list li img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #333;
+    transition: .2s;
+}
+
+#character-list li img:hover {
+    opacity: .7;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: .2s;
+}
+
+#toggle-btn:hover {
+    background-color: #262626;
+    color: white;
+    transition: .2s;
+}
+
+footer {
+    text-align: center;
+    background-color: #e6e3e3;
+    padding: 15px;
+    border: 2px solid black;
+}
+
+@media screen and (min-width: 800px){
+
+    #character-list li {
+        width:40%;
+    }
+
+}
