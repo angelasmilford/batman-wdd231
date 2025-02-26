@@ -119,6 +119,7 @@ header img {
     margin-top: 40px;
     border: 4px solid rgb(255, 247, 98);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+    position: relative;
 }
 
 .batman {
@@ -141,10 +142,11 @@ header img {
 
 
 .characters h1 {
+    margin-top: 50px;
     text-align: center;
     font-size: 30px;
     text-shadow: 2px 2px 3px #000000;
-    color:rgb(255, 247, 98)
+    color:rgb(255, 247, 98);
 }
 
 #character-list {
@@ -280,22 +282,31 @@ footer {
         flex-direction: row;
         justify-content: center; 
         align-items: center; 
-        padding-left: 20px; 
-        padding-right: 20px; 
-        gap: 30px;
+        padding-left: 5px; 
+        padding-right: 5px; 
+        gap: 5px;
         flex-wrap: wrap; 
     }
     
     .batman img {
-        max-width: 100%;  
-        height: auto;     
-        max-width: 350px; 
+        opacity: .8;
+        position: absolute;
+        border: none;
+        width: 600px;
+        z-index: -1;
     }
     
+    .about-batman h1 {
+        color:white;
+    }
+
     .about-batman p {
         line-height: 1.5; 
-        max-width: 650px; 
+        max-width: 600px;
         text-align: center;
+        margin-bottom: 30px;
+        color:rgb(255, 247, 98);
+        text-shadow: .5px .5px 1px #000000;
     }
 
     .footer-content {
