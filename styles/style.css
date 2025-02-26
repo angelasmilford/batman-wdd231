@@ -136,6 +136,7 @@ header img {
 
 .about-batman p{
     font-size: 14px;
+    text-align: left;
 }
 
 
@@ -275,18 +276,26 @@ footer {
 
 
     .about-batman {
+        display: flex;
         flex-direction: row;
-        padding-left: 92px;
-        padding-right:92px;
+        justify-content: center; 
+        align-items: center; 
+        padding-left: 20px; 
+        padding-right: 20px; 
         gap: 30px;
+        flex-wrap: wrap; 
     }
-
-    .batman img{
-        width:30%;
+    
+    .batman img {
+        max-width: 100%;  
+        height: auto;     
+        max-width: 350px; 
     }
-
-    .about-batman p{
-        font-size: 17px;
+    
+    .about-batman p {
+        line-height: 1.5; 
+        max-width: 650px; 
+        text-align: center;
     }
 
     .footer-content {
