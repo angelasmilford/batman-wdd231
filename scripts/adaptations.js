@@ -1,5 +1,4 @@
 //Movies
-// Fetch data from the OMDB API
 async function fetchBatmanMovies() {
   const url = 'http://www.omdbapi.com/?s=batman&type=movie&apikey=9f7fa826';
 
@@ -26,7 +25,6 @@ async function fetchBatmanMovies() {
   }
 }
 
-// Function to display movies on the page
 function displayMovies(movies) {
   const container = document.getElementById('movies-container'); 
   container.innerHTML = ''; // Clear any existing content
@@ -54,7 +52,6 @@ function displayMovies(movies) {
   });
 }
 
-// Call the function to fetch data
 fetchBatmanMovies();
 
 
