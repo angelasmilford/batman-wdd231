@@ -1,0 +1,50 @@
+@import "style.css";
+
+div{
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.visual{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(177, 177, 177);
+    color: black;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#movies{
+    flex: 1; 
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tvShows{
+    flex: 1; 
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+#movies img, #tvShows img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}

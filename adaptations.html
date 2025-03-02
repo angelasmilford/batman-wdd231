@@ -3,14 +3,52 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A grid of movies/tv shows featuring or starring the Dark Knight, Batman.">
+        <meta name="author" content="Angela Milford">
         <title>Adaptations</title>
-    </head>
+        <link rel="stylesheet" href="styles/adaptations.css">
+        <script src="scripts/adaptations.js" defer></script>
+    </head>                                                                                                                
 
     <body>
-        <header></header>
+        <header>
+            <img src="images/logobat.jpg" alt="Batman logo">
+            <div class="topnav">
+                <div class="items">
+                    <a href="index.html">Home</a>
+                    <a href="adaptations.html">Adaptations</a>
+                    <a href="comics.html">Comics</a>
+                    <a href="feedback.html">Feedback</a>
+                </div>
+            </div>
+        </header>
 
-        <main></main>
+        <main>
+            <h1>Adaptations</h1>
 
-        <footer></footer>
+            <section class="visual" id="movies">
+                <h2>Movies</h2>
+                <div id="movies-container"></div>
+            </section>
+
+            <section class="visual" id="tvShows">
+                <h2>TV Series</h2>
+                <div id="show-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <img class="logo" src = "images/logo.webp">
+                <p>Hyrum Whittier & Angela Milford</p>
+                <p>Last Updated: <span id="lastModified"></span></p>
+                <div class="social-icons">
+                  <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                  <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                  <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                  <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
