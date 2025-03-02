@@ -1,3 +1,44 @@
+let menubtn = document.querySelector(".menu");
+let topnav = document.querySelector(".topnav");
+let bar1 = document.querySelector(".bar1");
+let bar2 = document.querySelector(".bar2");
+let bar3 = document.querySelector(".bar3");
+
+function updateTopnavVisibility() {
+    if (window.innerWidth >= 800) {
+        topnav.style.display = "block";
+    } else {
+        topnav.style.display = "none";
+    }
+}
+
+menubtn.onclick = function () {
+    if (window.innerWidth < 800) {
+        if (topnav.style.display === "none" || topnav.style.display === "") {
+            topnav.style.display = "block";
+            bar1.style.marginLeft = "50px";  
+            bar3.style.marginLeft = "-50px";
+        } else {
+            topnav.style.display = "none";
+            bar1.style.marginLeft = ""; 
+            bar3.style.marginLeft = ""; 
+        }
+    }
+};
+
+window.onresize = function () {
+    if (window.innerWidth >= 800) {
+        bar1.style.marginLeft = ""; 
+        bar3.style.marginLeft = ""; 
+    };
+}
+
+updateTopnavVisibility();
+window.addEventListener('resize', updateTopnavVisibility);
+
+
+
+
 //Since the API doensn't actually give you an image, we are going to need to add images in this image map 
 //that atuomatically will sync it with the name of the character, as long as the name is the same as the api
 //webp images would probably be better, we might have to convert them
@@ -144,3 +185,45 @@ function toggleCharacters() {
 }
 
 fetchCharacters();
+
+let modal = document.querySelector(".feedback-modal");
+let btn = document.querySelector(".btn-modal");
+
+btn.onclick = function () {
+    let currentDisplay = window.getComputedStyle(modal).display;
+    console.log("Current display:", currentDisplay);
+
+    if (currentDisplay === "none") {
+        modal.style.display = "block";
+    } else {
+        modal.style.display = "none";
+    }
+};
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.querySelector(".dark-mode");
+    const body = document.body;
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+    }
+
+    darkModeToggle.addEventListener("click", function (event) {
+        event.preventDefault(); 
+        body.classList.toggle("dark-mode");
+
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
+    });
+});
+

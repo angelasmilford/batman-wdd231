@@ -11,32 +11,97 @@ header img {
     margin-bottom: 25px;
 }
 
+.menu {
+    margin: auto;
+    width:80px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 80px;
+    height: 7px;
+    background-color: black;
+    margin: 6px 0;
+    transition: .5s;
+    
+}
+
+.menu:hover {
+    transition: 1s;
+}
 
 .topnav {
     text-align: center;
     margin-top: 10px;
     font-size:20px;
-    border-bottom: 2px solid black;
     padding-bottom: 20px;
-    
+    display:none;
 }
 
-.topnav a {
+.topnav a{
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
     color: black;
+    cursor: pointer;
     border: 1px solid black;
     border-radius: 3px;
     padding: 5px;
     background-color: #e6e3e3;
     transition: .2s;
+    -ms-user-select: none; 
+    user-select: none; 
+    width: 100px;
+    margin: 5px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.29);
 }
+
 
 .topnav a:hover {
     transition: .2s;
     border:1px solid rgb(212, 203, 38);
     background-color: #585858;
     color:white
+}
+
+.feedback-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top:25px;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, .4);
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+
+.feedback-content {
+    background-color:white;
+    margin:auto;
+    padding:30px;
+    border: 2px solid black;
+    width:75%;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.feedback-form input, select, textarea {
+    width: 75%;
+    height:30px;
+    max-width: 75%;
+    margin-bottom: 5px;
+    max-height: 300px;
+    min-height: 30px;
+    border: 1px solid black;
     
 }
 
@@ -54,6 +119,12 @@ header img {
     margin-top: 40px;
     border: 4px solid rgb(255, 247, 98);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+    position: relative;
+}
+
+.batman {
+    border-top: 2px solid black;
+    margin-top: 20px;
 }
 
 .about-batman {
@@ -66,14 +137,16 @@ header img {
 
 .about-batman p{
     font-size: 14px;
+    text-align: left;
 }
 
 
 .characters h1 {
+    margin-top: 50px;
     text-align: center;
     font-size: 30px;
     text-shadow: 2px 2px 3px #000000;
-    color:rgb(255, 247, 98)
+    color:rgb(255, 247, 98);
 }
 
 #character-list {
@@ -130,6 +203,8 @@ header img {
     transition: .2s;
 }
 
+
+
 footer {
     margin-top:15px;
     background-color: #b3b3b3;
@@ -144,7 +219,7 @@ footer {
     display:none;
 }
 
-  .footer-content {
+.footer-content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -153,51 +228,85 @@ footer {
     padding-left: 35px;
     padding-right:35px;
     gap:10px;
-  }
+}
 
-  .footer-nav ul {
+.footer-nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 25px;
 
-  }
+}
 
-  .footer-nav a {
+.footer-nav a {
     color: black;
     text-decoration: none;
-  }
+}
 
-  .social-icons {
+.social-icons {
     display: flex;
     gap: 20px;
-  }
+}
 
-  .social-icons img {
+.social-icons img {
     width: 42px;
     height: 42px;
-  }
+}
+
+
 
 @media screen and (min-width: 800px){
+
+    .topnav {
+        display: block;
+    }
+
+    .topnav a{
+        display: inline-block;
+    }
+
+    .menu{
+        display: none;
+    }
+    
+
 
     #character-list li {
         width:40%;
     }
 
+
+
     .about-batman {
+        display: flex;
         flex-direction: row;
-        padding-left: 100px;
-        padding-right:100px;
-        gap: 30px;
+        justify-content: center; 
+        align-items: center; 
+        padding-left: 5px; 
+        padding-right: 5px; 
+        gap: 5px;
+        flex-wrap: wrap; 
+    }
+    
+    .batman img {
+        opacity: .8;
+        position: absolute;
+        border: none;
+        width: 600px;
+        z-index: -1;
+    }
+    
+    .about-batman h1 {
+        color:white;
     }
 
-    .batman img{
-        width:300px;
-        height:475px;
-    }
-
-    .about-batman p{
-        font-size: 17px;
+    .about-batman p {
+        line-height: 1.5; 
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 30px;
+        color:rgb(255, 247, 98);
+        text-shadow: .5px .5px 1px #000000;
     }
 
     .footer-content {
@@ -211,4 +320,89 @@ footer {
         width: 200px;
         height: auto;
     }
+<<<<<<< HEAD
 }
+=======
+
+
+}
+
+
+
+
+
+
+
+
+
+body.dark-mode {
+    background-color: #242424;
+    color: #e6e6e6;
+}
+
+.dark-mode .bar1 {
+    background-color: rgb(138, 138, 138);
+}
+
+.dark-mode .bar2 {
+    background-color: rgb(138, 138, 138);
+}
+
+.dark-mode .bar3 {
+    background-color: rgb(138, 138, 138);
+}
+
+.dark-mode .topnav a {
+    background-color: #333;
+    color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+}
+
+.dark-mode .topnav a:hover {
+    background-color: rgb(255, 247, 98);
+    color: black;
+}
+
+.dark-mode .feedback-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .feedback-content {
+    background-color: #1f1f1f;
+    color: white;
+    border: 2px solid #ffeb3b;
+}
+
+.dark-mode #character-list li {
+    background: #1f1f1f;
+    color: white;
+    border: 1px solid #ffeb3b;
+}
+
+.dark-mode #character-list li img {
+    border: 2px solid #ffeb3b;
+}
+
+.dark-mode #character-list li img:hover {
+    opacity: 0.8;
+}
+
+.dark-mode footer {
+    background-color: #646464;
+    color: #e6e6e6;
+}
+
+.dark-mode .footer-nav a {
+    color: #ffeb3b;
+}
+
+.dark-mode #toggle-btn {
+    background-color: #333;
+    color: #ffeb3b;
+}
+
+.dark-mode #toggle-btn:hover {
+    background-color: #ffeb3b;
+    color: black;
+}
+>>>>>>> a149a7e6e5f5a54d652545a439f6b32d1f922d2d
