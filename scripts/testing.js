@@ -1,9 +1,7 @@
-//HEADER
-// Dark Mode
 document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
-  
+
     // Check for saved dark mode preference
     if (localStorage.getItem("darkMode") === "enabled") {
         body.classList.add("dark-mode");
@@ -11,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         darkModeToggle.textContent = "🌙"; // Moon icon for dark mode
     }
-  
+
     darkModeToggle.addEventListener("click", function () {
         body.classList.toggle("dark-mode");
-  
+
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("darkMode", "enabled");
             darkModeToggle.textContent = "☀️"; // Change to sun
@@ -23,23 +21,4 @@ document.addEventListener("DOMContentLoaded", function () {
             darkModeToggle.textContent = "🌙"; // Change to moon
         }
     });
-  });
-
-//Movies
-
-
-
-
-
-//TV Shows
-
-
-
-
-//FOOTER
-function displayLastModified() {
-    const lastModifiedDate = document.lastModified; 
-    document.getElementById('lastModified').textContent = lastModifiedDate; 
-}
-
-displayLastModified();
+});

@@ -1,50 +1,139 @@
-@import "style.css";
-
-div{
-    margin: 0 auto;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    font-size: 50px;
-    text-align: center;
+body{
+    background-color: #A6A6A6;
+    font-family: ;
 }
 
-h2{
-    font-size: 30px;
-    text-align: center;
-    margin: 0 auto;
+
+
+
+/*HEADER*/
+header{
+
 }
 
-.visual{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-    background-color: rgb(177, 177, 177);
-    color: black;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#movies{
-    flex: 1; 
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#tvShows{
-    flex: 1; 
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-}
-
-#movies img, #tvShows img {
+header img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1C1F42;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+nav a:hover{
+    color: #FFCC33;
+    text-decoration: underline;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: #3D3D3D;
+}
+
+.dark-mode nav a {
+    color: gold;
+}
+
+
+
+
+/*MAIN*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#adaptations {
+    width: 80%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f4f4f4;
+    margin-bottom: 2rem;
+}
+
+#adaptations h1 {
+    text-align: center;
+}
+
+section {
+    width: 45%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f4f4f4;
+}
+
+.dark-mode #adaptations {
+    background: #444;
+    border-color: #666;
+}
+
+.dark-mode section {
+    background: #444;
+    border-color: #666;
+}
+
+
+
+
+/*Footer*/
+footer {
+    background-color: #1C1F42;
+    color: white;
+    padding: 20px;
+    
+}
+
+footer p{
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.dark-mode footer{
+    background-color: #3D3D3D;
+}
+
+.dark-mode footer p{
+    color: gold;
 }
