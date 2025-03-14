@@ -93,15 +93,11 @@ fetchBatmanMovies();
 fetch('https://api.tvmaze.com/search/shows?q=batman')
     .then(response => response.json())
     .then(data => {
-        const container = document.getElementById('tvShows');
+        const container = document.getElementById('tv-series');
         data.forEach(item => {
             const show = item.show;
             const showElement = document.createElement('div');
             showElement.classList.add('show');
-
-            const title = document.createElement('h3');
-            title.textContent = show.name;
-            showElement.appendChild(title);
 
             if (show.image && show.image.medium) {
                 const image = document.createElement('img');
@@ -109,6 +105,10 @@ fetch('https://api.tvmaze.com/search/shows?q=batman')
                 image.alt = `${show.name} Poster`;
                 showElement.appendChild(image);
             }
+
+            const title = document.createElement('h3');
+            title.textContent = show.name;
+            showElement.appendChild(title);
 
             const summary = document.createElement('p');
             summary.innerHTML = show.summary || 'No summary available.';
@@ -118,6 +118,7 @@ fetch('https://api.tvmaze.com/search/shows?q=batman')
         });
     })
     .catch(error => console.error('Error fetching data:', error));
+
 
 
 

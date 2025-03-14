@@ -5,7 +5,7 @@
 
 body{
     background-color: silver;
-    font-family: ;
+    font-family: "Oswald", sans-serif;
 }
 
 
@@ -93,7 +93,7 @@ main h1{
 }
 
 section {
-    width: 45%;
+    width: 85%;
     padding: 1rem;
     border: 3px solid darkgoldenrod;
     border-radius: 5px;
@@ -102,27 +102,27 @@ section {
 
 section h2{
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 21px;
 }
 
 section h3{
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
+    padding-top: 8px;
 }
 
 section p{
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #movies-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Creates 4 equal columns */
-    gap: 12px; /* Adds space between the columns */
+    gap: 21px;
 }
 
 .movie {
-    padding-bottom: 5px;
     padding-left: 2px;
     padding-right: 2px;
     text-align: center;
@@ -132,10 +132,35 @@ section p{
     width: 100%;
     height: auto;
     object-fit: cover;
-    margin-bottom: 10px;
 }
 
+#shows-container {
 
+}
+
+.show{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    text-align: center;
+}
+
+.show img{
+    width: 30%;
+    height: auto;
+    padding-left: 50px;
+}
+
+.show p{
+    padding-bottom: 30px;
+    font-size: 13px;
+    padding-left: 260px;
+    padding-right: 240px;
+    text-align: justify;
+}
+
+/*Dark Mode*/
 .dark-mode{
     background: black;
     border-color: #666;
@@ -144,6 +169,11 @@ section p{
 .dark-mode section {
     background: #444;
     border-color: #666;
+}
+
+/*Fonts*/
+h1, h2{
+    font-family: "Russo One", sans-serif;
 }
 
 
