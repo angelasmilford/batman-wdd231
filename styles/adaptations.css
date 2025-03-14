@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #A6A6A6;
+    background-color: silver;
     font-family: ;
 }
 
@@ -43,10 +43,11 @@ nav a {
     color: white;
     padding: 15px;
     font-size: 20px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 nav a:hover{
     color: #FFCC33;
-    text-decoration: underline;
+    transform: scale(1.1);
 }
 
 #darkModeToggle {
@@ -70,6 +71,10 @@ nav a:hover{
     color: gold;
 }
 
+.dark-mode nav a:hover{
+    color: white;
+}
+
 
 
 
@@ -82,29 +87,57 @@ main {
     padding: 2rem;
 }
 
-#adaptations {
-    width: 80%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #f4f4f4;
-    margin-bottom: 2rem;
-}
-
-#adaptations h1 {
+main h1{
     text-align: center;
+    font-size: 35px;
 }
 
 section {
     width: 45%;
     padding: 1rem;
-    border: 1px solid #ccc;
+    border: 3px solid darkgoldenrod;
     border-radius: 5px;
-    background: #f4f4f4;
+    background: #FFCC33;
 }
 
-.dark-mode #adaptations {
-    background: #444;
+section h2{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+section h3{
+    font-size: 15px;
+    text-align: center;
+}
+
+section p{
+    text-align: center;
+    font-size: 12px;
+}
+
+#movies-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Creates 4 equal columns */
+    gap: 12px; /* Adds space between the columns */
+}
+
+.movie {
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.dark-mode{
+    background: black;
     border-color: #666;
 }
 
@@ -126,7 +159,7 @@ footer {
 
 footer p{
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
 
 }
 
