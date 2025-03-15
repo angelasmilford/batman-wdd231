@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //MAIN
 //Movies
 async function fetchBatmanMovies() {
-  const url = 'http://www.omdbapi.com/?s=batman&type=movie&apikey=9f7fa826';
+  const url = 'https://www.omdbapi.com/?s=batman&type=movie&apikey=9f7fa826';
 
   try {
       const response = await fetch(url);
