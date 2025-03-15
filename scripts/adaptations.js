@@ -35,25 +35,25 @@ async function fetchBatmanMovies() {
   const url = 'https://www.omdbapi.com/?s=batman&type=movie&apikey=9f7fa826';
 
   try {
-      const response = await fetch(url);
+    const response = await fetch(url);
       
-      if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
 
-      const data = await response.json();
-      console.log(data); // Display the data in the console
+    const data = await response.json();
+    console.log(data); // Display the data in the console
 
-      // Check if the response is successful and contains movies
-      if (data.Response === 'True') {
-          // You can process and display the movies here
-          displayMovies(data.Search);
-      } else {
-          console.error('Error: ', data.Error);
-      }
+    // Check if the response is successful and contains movies
+    if (data.Response === 'True') {
+        // You can process and display the movies here
+        displayMovies(data.Search);
+    } else {
+        console.error('Error: ', data.Error);
+    }
 
   } catch (error) {
-      console.error('Fetch error:', error);
+    console.error('Fetch error:', error);
   }
 }
 
