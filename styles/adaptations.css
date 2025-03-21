@@ -12,10 +12,6 @@ body{
 
 
 /*HEADER*/
-header{
-
-}
-
 header img {
     width: 100%;
     object-fit: cover;
@@ -23,6 +19,8 @@ header img {
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 nav {
     display: flex;
@@ -134,10 +132,6 @@ section p{
     object-fit: cover;
 }
 
-#shows-container {
-
-}
-
 .show{
     display: flex;
     flex-direction: column;
@@ -146,18 +140,20 @@ section p{
     text-align: center;
 }
 
-.show img{
+.show img {
     width: 30%;
     height: auto;
-    padding-left: 50px;
+    display: block; /* Ensures it behaves like a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    padding: 10px 0; /* Adds some spacing */
 }
 
 .show p{
     padding-bottom: 30px;
     font-size: 13px;
-    padding-left: 260px;
-    padding-right: 240px;
     text-align: justify;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 /*Dark Mode*/
@@ -199,4 +195,39 @@ footer p{
 
 .dark-mode footer p{
     color: gold;
+}
+
+@media (max-width: 768px) { /* For tablets & phones */
+    h1 {
+        font-size: 24px;
+    }
+    #movies-container, #show-container {
+        grid-template-columns: 1fr; /* Show one per row on mobile */
+    }
+}
+
+@media (max-width: 480px) { /* For small phones */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav a{
+        color: white;
+    }
+    
+
+    .show img{
+        width: 100%;
+        height: auto;
+    }
+    .show p{
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-bottom: 21px;
+    }
 }

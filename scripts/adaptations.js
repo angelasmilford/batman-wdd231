@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             darkModeToggle.textContent = "🌙"; // Change to moon
         }
     });
-  });
-
+});
 
 
 
@@ -118,7 +117,6 @@ fetch('https://api.tvmaze.com/search/shows?q=batman')
         });
     })
     .catch(error => console.error('Error fetching data:', error));
-
 
 
 
