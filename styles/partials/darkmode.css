@@ -1,0 +1,101 @@
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: #3D3D3D;
+}
+
+.dark-mode nav a {
+    color: gold;
+}
+
+
+.dark-mode footer{
+    background-color: #3D3D3D;
+}
+
+.dark-mode footer p{
+    color: gold;
+}
+
+
+
+.dark-mode nav a:hover{
+    color: white;
+}
+
+.dark-mode .batman {
+    background: linear-gradient(to bottom, #000, #1C1F42);
+}
+
+.dark-mode .about-batman {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 247, 98);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .batman h1 {
+    color: #ffeb3b;
+}
+
+body.dark-mode {
+    background-color: #242424;
+    color: #e6e6e6;
+}
+
+.dark-mode .bar1 {
+    background-color: rgb(138, 138, 138);
+}
+
+.dark-mode .bar2 {
+    background-color: rgb(138, 138, 138);
+}
+
+.dark-mode .bar3 {
+    background-color: rgb(138, 138, 138);
+}
+
+.dark-mode .feedback-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .feedback-content {
+    background-color: #1C1F42;
+    color: white;
+    border: 2px solid #ffeb3b;
+}
+
+.dark-mode #character-list li {
+    background: #1f1f1f;
+    color: white;
+    border: 1px solid #ffeb3b;
+}
+
+.dark-mode #character-list li img {
+    border: 2px solid #ffeb3b;
+}
+
+.dark-mode #character-list li img:hover {
+    opacity: 0.8;
+}
+
+.dark-mode footer {
+    background-color: #646464;
+    color: #e6e6e6;
+}
+
+.dark-mode .footer-nav a {
+    color: #ffeb3b;
+}
+
+.dark-mode #toggle-btn {
+    background-color: #333;
+    color: #ffeb3b;
+}
+
+.dark-mode #toggle-btn:hover {
+    background-color: #ffeb3b;
+    color: black;
+}
