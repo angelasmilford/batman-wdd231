@@ -135,6 +135,41 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
+.other-pages {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(to bottom,#646464 , #242750);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    gap: 10px;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.other-pages div{
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: -20px;
+    width: 300px;
+    height: 100px;
+}
+
+.other-pages div a{
+    text-decoration: none;
+    color: white;
+    transition: .2s all;
+}
+
+.other-pages div a:hover{
+    color:rgb(255, 247, 98);
+}
 
 
 @media screen and (min-width: 800px){
@@ -182,6 +217,11 @@
     .feedback-form textarea {
         width: 100%;
         font-size: 1rem;
+    }
+
+    .other-pages {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
 
