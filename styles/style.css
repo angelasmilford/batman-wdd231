@@ -147,7 +147,7 @@
     padding-top: 20px;
 }
 
-.other-pages div{
+.other-pages a div{
     margin-top: 20px;
     padding: 20px;
     color: white;
@@ -159,16 +159,18 @@
     margin-bottom: -20px;
     width: 300px;
     height: 100px;
-}
-
-.other-pages div a{
-    text-decoration: none;
-    color: white;
     transition: .2s all;
 }
 
-.other-pages div a:hover{
+.other-pages a{
+    text-decoration: none;
+    color: white;
+}
+
+.other-pages a div:hover{
     color:rgb(255, 247, 98);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
 
