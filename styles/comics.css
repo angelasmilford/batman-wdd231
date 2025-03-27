@@ -5,17 +5,12 @@
 
 body{
     background-color: silver;
-    font-family: ;
 }
 
 
 
 
 /*HEADER*/
-header{
-
-}
-
 header img {
     width: 100%;
     object-fit: cover;
@@ -23,6 +18,8 @@ header img {
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 nav {
     display: flex;
@@ -77,7 +74,6 @@ nav a:hover{
 
 
 
-
 /*MAIN*/
 main{
     padding: 40px;
@@ -108,9 +104,13 @@ h2{
     padding: 15px;
     border: 3px solid darkgoldenrod;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 250px; 
+}
+
+.dark-mode .comic-item{
+    background: #3D3D3D;
+    border-color: #666;
 }
 
 .comic-image {
@@ -124,4 +124,29 @@ h2{
     margin: 0;
     font-size: 16px;
     line-height: 1.5;
+}
+.dark-mode .comic-item p{
+    color: white;
+}
+
+/*Footer*/
+footer {
+    background-color: #1C1F42;
+    color: white;
+    padding: 20px;
+    
+}
+
+footer p{
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.dark-mode footer{
+    background-color: #3D3D3D;
+}
+
+.dark-mode footer p{
+    color: gold;
 }

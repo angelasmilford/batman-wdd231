@@ -1,0 +1,21 @@
+/*Footer*/
+footer {
+    background-color: #1C1F42;
+    color: white;
+    padding: 20px;
+    
+}
+
+footer p{
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.dark-mode footer{
+    background-color: #3D3D3D;
+}
+
+.dark-mode footer p{
+    color: gold;
+}
