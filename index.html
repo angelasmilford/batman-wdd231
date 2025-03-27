@@ -5,6 +5,7 @@
     <link rel = "stylesheet" href = "styles/style.css"/>
     <script src="scripts/home.js" defer ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="This website will teach you all about Batman">
     <title>Batman Characters</title>
 </head>
   <header>
@@ -19,8 +20,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="adaptations.html">Adaptations</a></li>
             <li><a href="comics.html">Comics</a></li>
-            <li><a class="btn-modal">Feedback</a></li>
-            <button id="darkModeToggle">🌙</button>
+            <div class = "buttons">
+              <button class="btn-modal">💡</button>
+              <button id="darkModeToggle">🌙</button>
+            </div>
         </ul>
         
     </nav>
@@ -28,9 +31,9 @@
           <div class = "feedback-content">
             <form class="feedback-form">
               <button class = "close-btn">X</button>
-              <label for="name">Name</label>
+              <label for="name">Name:</label>
               <input type="text" id="name" required name="name" placeholder="John Doe">
-              <label for="country">Country</label>
+              <label for="country">Country:</label>
               <select id="country"required name="country">
                 <option value="United States">United States</option>
                 <option value="Afghanistan">Afghanistan</option>
@@ -278,9 +281,9 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
               </select>
-              <label for ="email">Email</label>
+              <label for ="email">Email:</label>
               <input type ="email" id = "email" required name= "email" placeholder="johndoe@gmail.com">
-              <label for="feedback">Feedback</label>
+              <label for="feedback">Feedback:</label>
               <textarea id="feedback" name="feedback" required placeholder="What can we improve on?" style="height:200px"></textarea>
               <input type="submit" value="Submit">
             </form>
@@ -309,25 +312,27 @@
             <button id="toggle-btn" onclick="toggleCharacters()">Show All</button>
         </div>
     </section>
-    <section class = "other-pages">
-      <div class = "page2">
-          <h1>Adaptations</h1>
-          <a href = "adaptations.html">Learn more about the different adaptations of batman</a>
-      </div>
-
-      <div class = "page2">
-        <h1>Comics</h1>
-        <a href="comics.html">Learn more about the different Batman comics</a>
-      </div>
-
-
-
-    </section>
+    
+    <section class="other-pages">
+      <a href="adaptations.html" class="page-link">
+          <div class="page2">
+              <h1>Adaptations</h1>
+              <p>Learn more about the different adaptations of Batman</p>
+          </div>
+      </a>
+  
+      <a href="comics.html" class="page-link">
+          <div class="page2">
+              <h1>Comics</h1>
+              <p>Learn more about the different Batman comics</p>
+          </div>
+      </a>
+  </section>
 </body>
 
 <footer>
     <div class="footer-content">
-      <img class="logo" src = "images/logo.webp">
+      <img class="logo" src = "images/logo.webp" alt = "logo">
       <p>Hyrum Whittier & Angela Milford<br>Last Updated: <span id="lastModified"></span></p>
       <div class="social-icons">
         <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
