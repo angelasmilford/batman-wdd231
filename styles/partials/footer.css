@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Footer*/
 footer {
     background-color: #1C1F42;
@@ -19,3 +20,55 @@ footer p{
 .dark-mode footer p{
     color: gold;
 }
+=======
+footer {
+    background-color: #1C1F42;
+    color: white;
+    padding: 20px;
+
+}
+
+.footer-content {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p{
+    text-align: center;
+    font-size: 20px;   
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 42px;
+    height: 42px;
+    background-color: white;
+    border-radius: 100%;
+    border:5px solid black;
+    transition: all .5s;
+}
+
+.social-icons img:hover {
+    background-color: #FFCC33;
+}
+
+.logo {
+    width: 250px; 
+    height: auto;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+}
+>>>>>>> 626808cc31c10c17bcc4f4a417c3557895c3b1a6

@@ -188,6 +188,7 @@ fetchCharacters();
 
 let modal = document.querySelector(".feedback-modal");
 let btn = document.querySelector(".btn-modal");
+let closebtn = document.querySelector(".close-btn");
 
 btn.onclick = function () {
     let currentDisplay = window.getComputedStyle(modal).display;
@@ -200,6 +201,10 @@ btn.onclick = function () {
     }
 };
 
+closebtn.onclick = function () {
+    modal.style.display = "none";
+}
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -207,23 +212,34 @@ window.onclick = function(event) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.querySelector(".dark-mode");
+    const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
+  
 
     if (localStorage.getItem("darkMode") === "enabled") {
         body.classList.add("dark-mode");
+        darkModeToggle.textContent = "☀️";
+    } else {
+        darkModeToggle.textContent = "🌙"; 
     }
-
-    darkModeToggle.addEventListener("click", function (event) {
-        event.preventDefault(); 
+  
+    darkModeToggle.addEventListener("click", function () {
         body.classList.toggle("dark-mode");
-
-
+  
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("darkMode", "enabled");
+            darkModeToggle.textContent = "☀️"; 
         } else {
             localStorage.setItem("darkMode", "disabled");
+            darkModeToggle.textContent = "🌙"; 
         }
     });
-});
+  });
 
+
+  function displayLastModified() {
+    const lastModifiedDate = document.lastModified; 
+    document.getElementById('lastModified').textContent = lastModifiedDate; 
+}
+
+displayLastModified();

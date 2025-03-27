@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <link rel = "stylesheet" href = "styles/style.css"/>
-    <script src="scripts/yes.js" defer ></script>
+    <script src="scripts/home.js" defer ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="This website will teach you all about Batman">
     <title>Batman Characters</title>
 </head>
-<header>
+  <header>
     <img src = "images/logobat.jpg" alt = "batman logo">
     <div class = "menu">
       <div class ="bar1"></div>
       <div class ="bar2"></div>
       <div class ="bar3"></div>
     </div>
-    <div class="topnav">
-        <div class="items">
-            <a href = "index.html">Home</a>
-            <a href = "adaptations.html">Adaptations</a>
-            <a href = "comics.html">Comics</a>
-            <a class = "btn-modal">Feedback</a>
-            <a class = "dark-mode">Dark Mode</a>
-        </div>
+    <nav class = "topnav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adaptations.html">Adaptations</a></li>
+            <li><a href="comics.html">Comics</a></li>
+            <div class = "buttons">
+              <button class="btn-modal">💡</button>
+              <button id="darkModeToggle">🌙</button>
+            </div>
+        </ul>
+        
+    </nav>
         <div class = "feedback-modal">
           <div class = "feedback-content">
             <form class="feedback-form">
-              <label for="name">Name</label>
+              <button class = "close-btn">X</button>
+              <label for="name">Name:</label>
               <input type="text" id="name" required name="name" placeholder="John Doe">
-              <label for="country">Country</label>
+              <label for="country">Country:</label>
               <select id="country"required name="country">
                 <option value="United States">United States</option>
                 <option value="Afghanistan">Afghanistan</option>
@@ -275,22 +281,23 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
               </select>
-              <label for ="email">Email</label>
+              <label for ="email">Email:</label>
               <input type ="email" id = "email" required name= "email" placeholder="johndoe@gmail.com">
-              <label for="feedback">Feedback</label>
+              <label for="feedback">Feedback:</label>
               <textarea id="feedback" name="feedback" required placeholder="What can we improve on?" style="height:200px"></textarea>
               <input type="submit" value="Submit">
-
             </form>
           </div>
         </div>
 </header>
 <body>
     <section class="batman">
+      
         <div class = "about-batman">
-            <img src = "images/batman.png" alt = "batman">
+          <h1>Home Page</h1>
+          <img src = "images/batman.png" alt = "batman">
             <div class="about-paragraph">
-                <h1>Home Page</h1>
+                
                 <p>Welcome to our Batman wiki, your ultimate guide to the world of the Dark Knight! This site is dedicated to everything Batman. Explore the history and evolution of Batman through various media, showcasing how he has been reinterpreted over the years. Our adaptations section highlights Batman’s appearances in movies, television shows, and animated series, providing a look at how the character has been brought to life in different forms. The comics section dives into the major story arcs and graphic novels that have defined Batman’s legacy. You’ll discover details about his gadgets, vehicles, and the world of Gotham City itself. Whether you're a long-time fan or just discovering the Dark Knight, this wiki is the perfect resource to immerse yourself in Batman's universe. Thank you for visiting, and enjoy exploring the many facets of the Caped Crusader!</p>
                 <h1>Who is The Batman?</h1>
                 <p>Batman is a DC Comics superhero created by artist Bob Kane and writer Bill Finger, first appearing in Detective Comics #27 in 1939. His true identity is Bruce Wayne, a billionaire philanthropist and owner of Wayne Enterprises. As a child, Bruce witnessed the murder of his parents, Thomas and Martha Wayne, in a Gotham City alley, a traumatic event that shaped his lifelong mission to fight crime. Vowing to rid the city of corruption and injustice, he dedicated years to intense physical and intellectual training, mastering martial arts, detective work, and various sciences. Unlike many superheroes, Batman has no superpowers, relying instead on his intellect, combat skills, and an arsenal of advanced gadgets.
@@ -305,31 +312,36 @@
             <button id="toggle-btn" onclick="toggleCharacters()">Show All</button>
         </div>
     </section>
+    
+    <section class="other-pages">
+      <a href="adaptations.html" class="page-link">
+          <div class="page2">
+              <h1>Adaptations</h1>
+              <p>Learn more about the different adaptations of Batman</p>
+          </div>
+      </a>
+  
+      <a href="comics.html" class="page-link">
+          <div class="page2">
+              <h1>Comics</h1>
+              <p>Learn more about the different Batman comics</p>
+          </div>
+      </a>
+  </section>
 </body>
 
 <footer>
     <div class="footer-content">
-      <img class="logo" src = "images/logo.webp">
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Adaptations</a></li>
-          <li><a href="#">Comics</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Feedback</a></li>
-        </ul>
-      </nav>
+      <img class="logo" src = "images/logo.webp" alt = "logo">
+      <p>Hyrum Whittier & Angela Milford<br>Last Updated: <span id="lastModified"></span></p>
       <div class="social-icons">
         <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-        <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-        <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        <a href="https://www.instagram.com/batman/?hl=en"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+        <a href="https://www.youtube.com/channel/UCiifkYAs_bq1pt_zbNAzYGg"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+        <a href="https://www.pinterest.com/dccomics/"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
       </div>
     </div>
   </footer>
 
-<<<<<<< HEAD
 </html>
-=======
 </html>
->>>>>>> d467484f0c9761b9109b5e0071fcbcc9c38e2556
