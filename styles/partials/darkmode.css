@@ -99,3 +99,21 @@ body.dark-mode {
     background-color: #ffeb3b;
     color: black;
 }
+
+.dark-mode .other-pages {
+    background: linear-gradient(to bottom, #000, #1C1F42);
+}
+
+.dark-mode .other-pages div {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 247, 98);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .other-pages div a {
+    color: rgb(255, 247, 98);
+}
+
+.dark-mode .other-pages div a:hover {
+    color: silver;
+}
