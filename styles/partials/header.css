@@ -1,3 +1,4 @@
+
 header img {
     width: 100%;
     object-fit: cover;
@@ -36,21 +37,19 @@ nav a:hover{
     transform: scale(1.1);
 }
 
-.btn-modal {
-    cursor: pointer;
-    
-}
-
-
-#darkModeToggle {
+#darkModeToggle, .btn-modal {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 20px;
 }
 
-.menu{
-    
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{   
     display: block;
 }
 
@@ -91,15 +90,27 @@ nav a:hover{
 
 .feedback-content {
     margin:auto;
-    background-color: #878cb9;
+    margin-top: 20px;
+    background-color: rgb(88, 91, 141);
     border-radius: 12px;
     padding: 2rem;
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     transform: translateY(-20px);
 }
+
+
+.feedback-content label{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 247, 98);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0px;
+    margin-right: auto;
+}
+
 
 .feedback-form {
     display: flex;
@@ -139,7 +150,7 @@ nav a:hover{
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
-    color: #333;
+    color: #ffffff;
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -165,9 +176,9 @@ nav a:hover{
         flex-shrink: 0;
     }
 
-    #darkModeToggle {
-        
+    .buttons {
         margin-left:auto;
+        flex-direction: row;
     }
 
 }
