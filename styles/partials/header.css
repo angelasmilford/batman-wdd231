@@ -91,7 +91,8 @@ nav a:hover{
 .feedback-content {
     margin:auto;
     margin-top: 20px;
-    background-color: rgb(88, 91, 141);
+    background: #FFCC33;
+    border: 3px solid darkgoldenrod;
     border-radius: 12px;
     padding: 2rem;
     width: 90%;
@@ -105,8 +106,7 @@ nav a:hover{
 .feedback-content label{
     font-size: 20px;
     font-weight: bold;
-    color: rgb(255, 247, 98);
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    color: black;
     margin-bottom: 0px;
     margin-right: auto;
 }
@@ -150,13 +150,13 @@ nav a:hover{
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-    color: #007BFF;
+    color: white;
 }
 
 
