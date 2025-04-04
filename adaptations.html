@@ -29,8 +29,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="adaptations.html">Adaptations</a></li>
                     <li><a href="comics.html">Comics</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
                 </ul>
+                
                 <button id="darkModeToggle">🌙</button>
             </nav>
         </header>
@@ -43,19 +43,31 @@
             <section id="movies">
                 <h2>Movies</h2>
                 <div id="movies-container"></div> <!--will display movie data from an API fetched in the JavaScript file-->
+                <button id="show-more-movies" class="show-more-btn">Show More</button>
             </section>
 
             <!--TV Shows content-->
             <section id="tv-series">
                 <h2>TV Shows</h2>
                 <div id="shows-container"></div> <!--will display movie data from an API fetched in the JavaScript file-->
+                <button id="show-more-shows" class="show-more-btn">Show More</button>
             </section>
         </main>
 
         <!--Footer content-->
         <footer>
-            <p>Hyrum Whittier & Angela Milford</p>
-            <p>Last Updated: <span id="lastModified"></span></p>
+            <div class="footer-content">
+              <img class="logo" src = "images/logo.webp" alt = "logo">
+              
+              <p>Angela Milford & Hyrum Whittier<br>Last Updated: <span id="lastModified"></span></p>
+              
+              <div class="social-icons">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="https://www.instagram.com/batman/?hl=en"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="https://www.youtube.com/channel/UCiifkYAs_bq1pt_zbNAzYGg"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="https://www.pinterest.com/dccomics/"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+              </div>
+            </div>
         </footer>
     </body>
 </html>

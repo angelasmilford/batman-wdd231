@@ -48,6 +48,8 @@ nav a:hover{
     transform: scale(1.1);
 }
 
+
+
 #darkModeToggle {
     background: none;
     border: none;
@@ -90,12 +92,16 @@ main h1{
     font-size: 35px;
 }
 
+
+
 section {
     width: 85%;
     padding: 1rem;
     border: 3px solid darkgoldenrod;
     border-radius: 5px;
     background: #FFCC33;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 section h2{
@@ -114,47 +120,61 @@ section p{
     font-size: 14px;
 }
 
-#movies-container {
+
+
+#movies-container, #shows-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Creates 4 equal columns */
-    gap: 21px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
-.movie {
-    padding-left: 2px;
-    padding-right: 2px;
-    text-align: center;
+#movies-container div:hover, #shows-container div:hover {
+    transform: scale(1.05);
 }
 
-.movie img {
+#movies-container img, #shows-container img {
     width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
-.show{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
-    text-align: center;
+main p{
+    font-size: 15px;
 }
 
-.show img {
-    width: 30%;
-    height: auto;
-    display: block; /* Ensures it behaves like a block element */
-    margin: 0 auto; /* Centers the image horizontally */
-    padding: 10px 0; /* Adds some spacing */
+.show-more-btn {
+    display: none;
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    background:#444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Oswald', sans-serif;
 }
 
-.show p{
-    padding-bottom: 30px;
-    font-size: 13px;
-    text-align: justify;
-    padding-left: 100px;
-    padding-right: 100px;
+.show-more-btn:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+    background-color: black;
+    color: #FFCC33;
 }
+
+body.dark-mode .show-more-btn {
+    color: black;
+    background: #FFCC33;
+}
+
+body.dark-mode .show-more-btn:hover {
+    background-color: white;
+    color: black
+}
+
+
 
 /*Dark Mode*/
 .dark-mode{
@@ -166,6 +186,8 @@ section p{
     background: #444;
     border-color: #666;
 }
+
+
 
 /*Fonts*/
 h1, h2{
@@ -195,6 +217,37 @@ footer p{
 
 .dark-mode footer p{
     color: gold;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes items across the row */
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.footer-text {
+    flex-grow: 1; /* Allows the text to expand and center itself */
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Adds space between icons */
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) { /* For tablets & phones */

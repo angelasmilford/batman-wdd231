@@ -29,94 +29,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //MAIN
-//Movies
+const apiKey = '44445625';
+const LIMIT = 6;
+
+let allMovies = [];
+let allShows = [];
+let showingAllMovies = false;
+let showingAllShows = false;
+
 async function fetchBatmanMovies() {
-  const url = 'https://www.omdbapi.com/?s=batman&type=movie&apikey=9f7fa826';
-
-  try {
-    const response = await fetch(url);
-      
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
+    const response = await fetch(`https://www.omdbapi.com/?s=Batman&type=movie&apikey=${44445625}`);
     const data = await response.json();
-    console.log(data); // Display the data in the console
+    if (data.Search) {
+        allMovies = data.Search;
+        displayItems(allMovies, 'movies-container', showingAllMovies, 'show-more-movies');
+    }
+}
 
-    // Check if the response is successful and contains movies
-    if (data.Response === 'True') {
-        // You can process and display the movies here
-        displayMovies(data.Search);
+async function fetchBatmanShows() {
+    const response = await fetch(`https://www.omdbapi.com/?s=Batman&type=series&apikey=${44445625}`);
+    const data = await response.json();
+    if (data.Search) {
+        allShows = data.Search;
+        displayItems(allShows, 'shows-container', showingAllShows, 'show-more-shows');
+    }
+}
+
+function displayItems(items, containerId, showAll, buttonId) {
+    const container = document.getElementById(containerId);
+    const button = document.getElementById(buttonId);
+
+    container.innerHTML = '';
+
+    const visibleItems = showAll ? items : items.slice(0, LIMIT);
+
+    visibleItems.forEach(item => {
+        const element = document.createElement('div');
+        element.innerHTML = `
+            <img src="${item.Poster}" alt="${item.Title} poster">
+            <p>${item.Title} (${item.Year})</p>
+        `;
+        container.appendChild(element);
+    });
+
+    if (items.length > LIMIT) {
+        button.style.display = 'block';
+        button.textContent = showAll ? 'Show Less' : 'Show More';
     } else {
-        console.error('Error: ', data.Error);
+        button.style.display = 'none';
     }
-
-  } catch (error) {
-    console.error('Fetch error:', error);
-  }
 }
 
-function displayMovies(movies) {
-  const container = document.getElementById('movies-container'); 
-  container.innerHTML = ''; // Clear any existing content
-
-  movies.forEach(movie => {
-    const movieElement = document.createElement('div');
-    movieElement.classList.add('movie');
-
-    if (movie.Poster !== 'N/A') {
-        const poster = document.createElement('img');
-        poster.src = movie.Poster;
-        poster.alt = `${movie.Title} Poster`;
-        movieElement.appendChild(poster);
-    }
-      
-    const title = document.createElement('h3');
-    title.textContent = movie.Title;
-    movieElement.appendChild(title);
-
-    const year = document.createElement('p');
-    year.textContent = `(${movie.Year})`;
-    movieElement.appendChild(year);
-
-      
-
-    container.appendChild(movieElement);
-  });
+// Toggle functions
+function toggleMovies() {
+    showingAllMovies = !showingAllMovies;
+    displayItems(allMovies, 'movies-container', showingAllMovies, 'show-more-movies');
 }
 
-fetchBatmanMovies();
+function toggleShows() {
+    showingAllShows = !showingAllShows;
+    displayItems(allShows, 'shows-container', showingAllShows, 'show-more-shows');
+}
 
+// On load
+window.onload = function () {
+    fetchBatmanMovies();
+    fetchBatmanShows();
+    document.getElementById('show-more-movies').addEventListener('click', toggleMovies);
+    document.getElementById('show-more-shows').addEventListener('click', toggleShows);
+};
 
-//TV Shows
-fetch('https://api.tvmaze.com/search/shows?q=batman')
-    .then(response => response.json())
-    .then(data => {
-        const container = document.getElementById('tv-series');
-        data.forEach(item => {
-            const show = item.show;
-            const showElement = document.createElement('div');
-            showElement.classList.add('show');
-
-            if (show.image && show.image.medium) {
-                const image = document.createElement('img');
-                image.src = show.image.medium;
-                image.alt = `${show.name} Poster`;
-                showElement.appendChild(image);
-            }
-
-            const title = document.createElement('h3');
-            title.textContent = show.name;
-            showElement.appendChild(title);
-
-            const summary = document.createElement('p');
-            summary.innerHTML = show.summary || 'No summary available.';
-            showElement.appendChild(summary);
-
-            container.appendChild(showElement);
-        });
-    })
-    .catch(error => console.error('Error fetching data:', error));
 
 
 

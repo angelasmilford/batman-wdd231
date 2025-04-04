@@ -5,6 +5,7 @@
 
 body{
     background-color: silver;
+    font-family: "Oswald", sans-serif;
 }
 
 
@@ -127,6 +128,11 @@ h2{
 }
 .dark-mode .comic-item p{
     color: white;
+}
+
+/*Fonts*/
+h1, h2{
+    font-family: "Russo One", sans-serif;
 }
 
 /*Footer*/

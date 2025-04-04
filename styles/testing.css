@@ -1,39 +1,50 @@
-nav {
+/* Container */
+.bat-signal {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
 }
 
-nav ul {
-    list-style: none;
+
+/* Bat Symbol */
+.bat-symbol {
+    position: absolute;
+    width: 200px;
+    opacity: 0;
+    animation: bat-signal-fade 4s infinite alternate ease-in-out;
+}
+
+/* Spotlight Movement */
+@keyframes spotlight-move {
+    0% {
+        transform: rotate(-40deg) translateX(0);
+    }
+    100% {
+        transform: rotate(-50deg) translateX(-20px);
+    }
+}
+
+/* Bat Symbol Fade In and Out */
+@keyframes bat-signal-fade {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.dark-mode .bat-signal {
     display: flex;
-    gap: 15px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #000;
-}
-
-#darkModeToggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 5px 10px;
-}
-
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode nav {
-    background-color: #333;
-}
-
-.dark-mode nav a {
-    color: white;
+.light-mode .bat-signal {
+    display: none;
 }
