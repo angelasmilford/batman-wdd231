@@ -6,7 +6,8 @@
         <meta name="description" content="A grid of movies/tv shows featuring or starring the Dark Knight, Batman.">
         <meta name="author" content="Angela Milford">
         
-        <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🦇</text></svg>' type="image/svg+xml">
+        <!--Favicon-->
+        <link rel="icon" href="images/favicon.ico" type="image/favicon">
 
         <title>Adaptations of Batman</title>
         
@@ -22,8 +23,16 @@
     <body>
         <!--Header content-->
         <header>
-            <img src = "images/logobat.jpg" alt = "batman logo">
+            <img src = "images/logobat.jpg" alt = "batman logo"> <!--Header image-->
+
+            <!--Hamburger icon-->
+            <div class = "menu">
+                <div class ="bar1"></div>
+                <div class ="bar2"></div>
+                <div class ="bar3"></div>
+            </div>
             
+            <!--Navigation menu-->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -31,7 +40,7 @@
                     <li><a href="comics.html">Comics</a></li>
                 </ul>
                 
-                <button id="darkModeToggle">🌙</button>
+                <button id="darkModeToggle">🌙</button> <!--Dark Mode-->
             </nav>
         </header>
 
@@ -52,6 +61,12 @@
                 <div id="shows-container"></div> <!--will display movie data from an API fetched in the JavaScript file-->
                 <button id="show-more-shows" class="show-more-btn">Show More</button>
             </section>
+
+            <!--CSS animation for the Bat signal-->
+            <div class="bat-signal">
+                <div class="spotlight"></div>
+                <img class="bat-image" src="https://1000logos.net/wp-content/uploads/2021/10/Batman-Logo.png" alt="bat signal">
+            </div>                                     
         </main>
 
         <!--Footer content-->
