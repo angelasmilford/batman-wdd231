@@ -1,25 +1,31 @@
-// Dark Mode
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
+export function initDarkMode() {
+    document.addEventListener("DOMContentLoaded", function () {
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const mainlogo = document.getElementById('main-logo');
+      const footerlogo = document.getElementById('footer-logo');
+      const body = document.body;
   
-    // Check for saved dark mode preference
-    if (localStorage.getItem("darkMode") === "enabled") {
+      if (localStorage.getItem("darkMode") === "enabled") {
         body.classList.add("dark-mode");
-        darkModeToggle.textContent = "☀️"; // Sun icon for light mode
-    } else {
-        darkModeToggle.textContent = "🌙"; // Moon icon for dark mode
-    }
+        darkModeToggle.textContent = "☀️";
+      } else {
+        darkModeToggle.textContent = "🌙"; 
+      }
   
-    darkModeToggle.addEventListener("click", function () {
+      darkModeToggle.addEventListener("click", function () {
         body.classList.toggle("dark-mode");
   
         if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-            darkModeToggle.textContent = "☀️"; // Change to sun
+          mainlogo.src = 'images/batman logo dark.webp';
+          footerlogo.src = 'images/logo.webp';
+          localStorage.setItem("darkMode", "enabled");
+          darkModeToggle.textContent = "☀️"; 
         } else {
-            localStorage.setItem("darkMode", "disabled");
-            darkModeToggle.textContent = "🌙"; // Change to moon
+          localStorage.setItem("darkMode", "disabled");
+          mainlogo.src = 'images/logobat.jpg';
+          footerlogo.src = 'images/darkmini.webp';
+          darkModeToggle.textContent = "🌙"; 
         }
+      });
     });
-});
+  }
