@@ -149,11 +149,14 @@ function toggleCharacters() {
 
 fetchCharacters();
 
+window.toggleCharacters = toggleCharacters;
+
 
   function displayLastModified() {
     const lastModifiedDate = document.lastModified; 
     document.getElementById('lastModified').textContent = lastModifiedDate; 
 }
+
 
 displayLastModified();
 initDarkMode();
