@@ -13,28 +13,25 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(to bottom, #242750, #646464);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     
 }
 
 .batman p {
     text-align: left;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
 
 .batman h1 {
     font-size: 36px;
     font-weight: bold;
-    color: rgb(255, 247, 98);
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    color:black;
     margin-bottom: 20px;
 }
 
 .batman img {
     width: 60%;
     max-width: 500px;
-    border: 5px solid rgb(255, 247, 98);
+    border: 3px solid darkgoldenrod;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
 }
@@ -44,13 +41,15 @@
     max-width: 800px;
     margin-top: 20px;
     padding: 20px;
-    color: white;
+    color: black;
     font-size: 16px;
     line-height: 1.6;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: -20px;
+    background: #FFCC33;
+    border: 3px solid darkgoldenrod;
     
 }
 
@@ -59,8 +58,7 @@
     margin-bottom: 30px;
     font-size: 36px;
     font-weight: bold;
-    color: rgb(255, 247, 98);
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    color: black;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -82,18 +80,19 @@
 }
 
 #character-list li {
-    border: 1px solid #000000;
     padding: 15px;
     display: flex;
     align-items: center;
     gap: 15px;
-    background: #e6e3e3;
     border-radius: 8px;
     width:85%;
     min-height: 20%;
     max-height: 20%;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background: #FFCC33;
+    border: 3px solid darkgoldenrod;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #character-list li div {
@@ -140,8 +139,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(to bottom,#646464 , #242750);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    background: silver;
+    
     gap: 10px;
     align-items: center;
     padding-top: 20px;
@@ -150,10 +149,11 @@
 .other-pages a div{
     margin-top: 20px;
     padding: 20px;
-    color: white;
+    color: black;
     font-size: 16px;
     line-height: 1.6;
-    background: rgba(0, 0, 0, 0.6);
+    background: #FFCC33;
+    border: 3px solid darkgoldenrod;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: -20px;
@@ -168,9 +168,9 @@
 }
 
 .other-pages a div:hover{
-    color:rgb(255, 247, 98);
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: white;
 }
 
 

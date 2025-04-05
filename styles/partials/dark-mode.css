@@ -3,6 +3,8 @@
     color: white;
 }
 
+
+/*Navigation menu*/
 .dark-mode nav {
     background-color: #3D3D3D;
 }
@@ -11,7 +13,12 @@
     color: gold;
 }
 
+.dark-mode nav a:hover{
+    color: white;
+}
 
+
+/*Footer*/
 .dark-mode footer{
     background-color: #3D3D3D;
 }
@@ -20,31 +27,46 @@
     color: gold;
 }
 
-
-
-.dark-mode nav a:hover{
-    color: white;
+.dark-mode footer {
+    background-color: #646464;
+    color: #e6e6e6;
 }
 
+.dark-mode .footer-nav a {
+    color: #ffeb3b;
+}
+
+
+/*Home page*/
 .dark-mode .batman {
-    background: linear-gradient(to bottom, #000, #1C1F42);
+    background: black;
 }
 
 .dark-mode .about-batman {
     background: rgba(255, 255, 255, 0.1);
-    color: rgb(255, 247, 98);
+    color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    border: 3px solid gray;
 }
 
+.dark-mode .about-batman img {
+    border: 3px solid gray;
+}
 .dark-mode .batman h1 {
-    color: #ffeb3b;
+    color: white;
+}
+
+.dark-mode .characters h1 {
+    color:white;
 }
 
 body.dark-mode {
-    background-color: #242424;
+    background-color: black;
     color: #e6e6e6;
 }
 
+
+/*Hamburger icon*/
 .dark-mode .bar1 {
     background-color: rgb(138, 138, 138);
 }
@@ -57,37 +79,50 @@ body.dark-mode {
     background-color: rgb(138, 138, 138);
 }
 
+
+/*Feedback Modal*/
 .dark-mode .feedback-modal {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .dark-mode .feedback-content {
-    background-color: #1C1F42;
+    background-color: black;
     color: white;
+    border: 3px solid gray;
 }
 
+.dark-mode .close-btn {
+    color:white;
+}
+
+.dark-mode .close-btn:hover {
+    color:gray;
+}
+
+.dark-mode .feedback-content label {
+    color:white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8)
+}
+
+/*Characters' List*/
 .dark-mode #character-list li {
     background: #1f1f1f;
     color: white;
-    border: 1px solid #ffeb3b;
+    border: 2px solid gray;
 }
 
-.dark-mode #character-list li img {
+.dark-mode #character-list li:hover {
+    background: #1f1f1f;
+    color: white;
     border: 2px solid #ffeb3b;
 }
 
-.dark-mode #character-list li img:hover {
-    opacity: 0.8;
+.dark-mode #character-list li img {
+    border: 2px solid gray;
 }
 
-.dark-mode footer {
-    background-color: #646464;
-    color: #e6e6e6;
-}
 
-.dark-mode .footer-nav a {
-    color: #ffeb3b;
-}
+
 
 .dark-mode #toggle-btn {
     background-color: #333;
@@ -100,7 +135,7 @@ body.dark-mode {
 }
 
 .dark-mode .other-pages {
-    background: linear-gradient(to bottom, #000, #1C1F42);
+    background: black;
 }
 
 .dark-mode .other-pages div {
@@ -109,10 +144,28 @@ body.dark-mode {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
+.dark-mode .other-pages div:hover {
+    border: 3px solid #ffeb3b;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 .dark-mode .other-pages a div{
-    color: rgb(255, 247, 98);
+    color: white;
+    border: 3px solid gray;
 }
 
 .dark-mode .other-pages a div:hover {
-    color: silver;
+    color:white;
+}
+
+
+.dark-mode{
+    background: black;
+    border-color: #666;
+}
+
+.dark-mode section {
+    background: #444;
+    border-color: #666;
 }

@@ -25,12 +25,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//Hamburger icon
+let menubtn = document.querySelector(".menu");
+let topnav = document.querySelector(".topnav");
+let bar1 = document.querySelector(".bar1");
+let bar2 = document.querySelector(".bar2");
+let bar3 = document.querySelector(".bar3");
 
+function updateTopnavVisibility() {
+    if (window.innerWidth >= 800) {
+        topnav.style.display = "block";
+    } else {
+        topnav.style.display = "none";
+    }
+}
 
+menubtn.onclick = function () {
+    if (window.innerWidth < 800) {
+        if (topnav.style.display === "none" || topnav.style.display === "") {
+            topnav.style.display = "block";
+            bar1.style.marginLeft = "50px";  
+            bar3.style.marginLeft = "-50px";
+        } else {
+            topnav.style.display = "none";
+            bar1.style.marginLeft = ""; 
+            bar3.style.marginLeft = ""; 
+        }
+    }
+};
+
+window.onresize = function () {
+    if (window.innerWidth >= 800) {
+        bar1.style.marginLeft = ""; 
+        bar3.style.marginLeft = ""; 
+    };
+}
+
+updateTopnavVisibility();
+window.addEventListener('resize', updateTopnavVisibility);
 
 //MAIN
 const apiKey = '44445625';
-const LIMIT = 6;
+const LIMIT = 4;
 
 let allMovies = [];
 let allShows = [];

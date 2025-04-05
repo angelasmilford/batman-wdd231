@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // DARK MODE TOGGLE
+    // Dark Mode Toggle
     const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // BATMAN COMICS DATA
+    // Batman Comics Data
     const batmanComics = [
         {
             title: "Detective Comics #27 (1939) - First appearance of Batman",

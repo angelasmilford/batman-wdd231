@@ -124,7 +124,7 @@ section p{
 
 #movies-container, #shows-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 1rem;
 }
@@ -142,6 +142,7 @@ main p{
     font-size: 15px;
 }
 
+/*Show More button*/
 .show-more-btn {
     display: none;
     margin: 1rem auto;
@@ -193,7 +194,22 @@ h1, h2{
 }
 
 /*CSS animation*/
-
+.bat-signal {
+    width: 500px;
+    height: 500px;
+    background-image: url('https://www.pngmart.com/files/23/Batman-Logo-PNG-Isolated-Image.png'); /* Replace with your image path */
+    background-size: cover;
+    animation-name: fadeInOut;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
 
 
 
@@ -255,8 +271,11 @@ footer p{
     h1 {
         font-size: 24px;
     }
-    #movies-container, #show-container {
-        grid-template-columns: 1fr; /* Show one per row on mobile */
+    #movies-container, #shows-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #movies-container img, #shows-container img {
+        width: 95%;
     }
 }
 
@@ -283,5 +302,12 @@ footer p{
         padding-left: 2px;
         padding-right: 2px;
         padding-bottom: 21px;
+    }
+    
+    #movies-container, #shows-container {
+        grid-template-columns: 1fr;
+    }
+    #movies-container img, #shows-container img {
+        width: 70%;
     }
 }
