@@ -21,7 +21,7 @@ header img {
 }
 
 
-
+/*Navigation menu*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -72,6 +72,8 @@ nav a:hover{
 .dark-mode nav a:hover{
     color: white;
 }
+
+
 
 
 
@@ -155,4 +157,35 @@ footer p{
 
 .dark-mode footer p{
     color: gold;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes items across the row */
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.footer-text {
+    flex-grow: 1; /* Allows the text to expand and center itself */
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Adds space between icons */
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }

@@ -169,3 +169,12 @@ body.dark-mode {
     background: #444;
     border-color: #666;
 }
+
+.dark-mode{
+    background: black;
+    border-color: #666;
+}
+
+.dark-mode section p {
+    color: white;
+}
