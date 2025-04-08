@@ -1,26 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Dark Mode Toggle
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
+import { initDarkMode } from './darkmode.js';
+import { initTopnav } from './hamburger.js';
+import { initFeedbackModal } from './feedbackModal.js';
+import { initFormSubmit } from './feedbackModal.js';
 
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.textContent = "☀️";
-    } else {
-        darkModeToggle.textContent = "🌙";
-    }
 
-    darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-            darkModeToggle.textContent = "☀️";
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-            darkModeToggle.textContent = "🌙";
-        }
-    });
 
     // Batman Comics Data
     const batmanComics = [
@@ -112,9 +96,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     displayComics(batmanComics);
 
-    // LAST MODIFIED FOOTER
-    const lastModifiedEl = document.getElementById('lastModified');
-    if (lastModifiedEl) {
-        lastModifiedEl.textContent = document.lastModified;
-    }
-});
+    
+    //FOOTER
+function displayLastModified() {
+    const lastModifiedDate = document.lastModified; 
+    document.getElementById('lastModified').textContent = lastModifiedDate; 
+}
+
+displayLastModified();
+initDarkMode();
+initTopnav();
+initFeedbackModal();
+document.addEventListener('DOMContentLoaded', () => {
+    initFormSubmit();
+  });
+
