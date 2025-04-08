@@ -221,6 +221,23 @@ nav a:hover{
     color: #007BFF;
 }
 
+.thank-you {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    background-color: #FFCC33;
+    border-radius: 12px;
+    color: black;
+}
+
+.thank-you.show {
+    opacity: 1;
+}
+
 
 @media screen and (min-width: 800px){
     nav {
