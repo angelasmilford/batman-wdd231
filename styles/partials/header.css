@@ -232,10 +232,12 @@ nav a:hover{
     background-color: #FFCC33;
     border-radius: 12px;
     color: black;
+    display: none;
 }
 
 .thank-you.show {
     opacity: 1;
+    display: block;
 }
 
 
