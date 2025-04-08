@@ -1,68 +1,11 @@
-//HEADER
-// Dark Mode
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
-  
-    // Check for saved dark mode preference
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.textContent = "☀️"; // Sun icon for light mode
-    } else {
-        darkModeToggle.textContent = "🌙"; // Moon icon for dark mode
-    }
-  
-    darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-  
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-            darkModeToggle.textContent = "☀️"; // Change to sun
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-            darkModeToggle.textContent = "🌙"; // Change to moon
-        }
-    });
-});
+import { initDarkMode } from './darkmode.js';
+import { initTopnav } from './hamburger.js';
+import { initFeedbackModal } from './feedbackModal.js';
+import { initFormSubmit } from './feedbackModal.js';
 
-//Hamburger icon
-let menubtn = document.querySelector(".menu");
-let topnav = document.querySelector(".topnav");
-let bar1 = document.querySelector(".bar1");
-let bar2 = document.querySelector(".bar2");
-let bar3 = document.querySelector(".bar3");
 
-function updateTopnavVisibility() {
-    if (window.innerWidth >= 800) {
-        topnav.style.display = "block";
-    } else {
-        topnav.style.display = "none";
-    }
-}
 
-menubtn.onclick = function () {
-    if (window.innerWidth < 800) {
-        if (topnav.style.display === "none" || topnav.style.display === "") {
-            topnav.style.display = "block";
-            bar1.style.marginLeft = "50px";  
-            bar3.style.marginLeft = "-50px";
-        } else {
-            topnav.style.display = "none";
-            bar1.style.marginLeft = ""; 
-            bar3.style.marginLeft = ""; 
-        }
-    }
-};
 
-window.onresize = function () {
-    if (window.innerWidth >= 800) {
-        bar1.style.marginLeft = ""; 
-        bar3.style.marginLeft = ""; 
-    };
-}
-
-updateTopnavVisibility();
-window.addEventListener('resize', updateTopnavVisibility);
 
 //MAIN
 const apiKey = '44445625';
@@ -146,3 +89,9 @@ function displayLastModified() {
 }
 
 displayLastModified();
+initDarkMode();
+initTopnav();
+initFeedbackModal();
+document.addEventListener('DOMContentLoaded', () => {
+    initFormSubmit();
+  });

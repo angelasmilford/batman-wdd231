@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <link rel = "stylesheet" href = "styles/style.css"/>
-    <script src="scripts/home.js" defer ></script>
+    <script type = "module" src="scripts/home.js" defer ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta description="This website will teach you all about Batman">
     <title>Batman Wiki</title>
+    <link rel="icon" href="images/favicon.ico" type="image/favicon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Russo+One&display=swap" rel="stylesheet">
 </head>
   <header>
-    <img src = "images/logobat.jpg" alt = "batman logo">
+    <img id = "main-logo" src = "images/logobat.jpg" alt = "batman logo">
     <div class = "menu">
       <div class ="bar1"></div>
       <div class ="bar2"></div>
@@ -21,7 +25,7 @@
             <li><a href="adaptations.html">Adaptations</a></li>
             <li><a href="comics.html">Comics</a></li>
             <div class = "buttons">
-              <button class="btn-modal">ℹ️</button>
+              <button class="btn-modal">👍👎</button>
               <button id="darkModeToggle">🌙</button>
             </div>
         </ul>
@@ -285,9 +289,12 @@
               <input type ="email" id = "email" required name= "email" placeholder="johndoe@gmail.com">
               <label for="feedback">Feedback:</label>
               <textarea id="feedback" name="feedback" required placeholder="What can we improve on?" style="height:200px"></textarea>
-              <input type="submit" value="Submit">
+              <input class = "submit" type="submit" value="Submit">
             </form>
           </div>
+        </div>
+        <div class = thank-you>
+          <p>Thank you for your feedback!</p>
         </div>
 </header>
 <body>
@@ -332,7 +339,7 @@
 
 <footer>
     <div class="footer-content">
-      <img class="logo" src = "images/logo.webp" alt = "logo">
+      <img id = "footer-logo" class="logo" src = "images/logo.webp" alt = "logo">
       <p>Hyrum Whittier & Angela Milford<br>Last Updated: <span id="lastModified"></span></p>
       <div class="social-icons">
         <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->

@@ -3,7 +3,7 @@
 @import "partials/global.css";
 @import "partials/variables.css";
 @import "partials/home.css";
-@import "partials/darkmode.css";
+@import "partials/dark-mode.css";
 
 
 
@@ -51,6 +51,11 @@
     background: #FFCC33;
     border: 3px solid darkgoldenrod;
     
+}
+
+.characters {
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 .characters h1 {

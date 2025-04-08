@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*Footer*/
 footer {
     background-color: #1C1F42;
@@ -20,7 +20,7 @@ footer p{
 .dark-mode footer p{
     color: gold;
 }
-=======
+
 footer {
     background-color: #1C1F42;
     color: white;
@@ -71,4 +71,4 @@ footer p{
     margin: 0;
     padding: 0;
 }
->>>>>>> 626808cc31c10c17bcc4f4a417c3557895c3b1a6
+

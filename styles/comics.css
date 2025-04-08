@@ -1,26 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-color: silver;
-    font-family: "Oswald", sans-serif;
-}
+@import "partials/footer.css";
+@import "partials/header.css";
+@import "partials/global.css";
+@import "partials/variables.css";
+@import "partials/home.css";
+@import "partials/dark-mode.css";
 
 
 
 
-/*HEADER*/
-header img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
+<<<<<<< HEAD
 /*Navigation menu*/
 nav {
     display: flex;
@@ -73,6 +63,8 @@ nav a:hover{
     color: white;
 }
 
+=======
+>>>>>>> dc0eed1ad83144c7530ed8ae7b5b9a9fe98a0136
 
 
 
@@ -137,13 +129,14 @@ h1, h2{
     font-family: "Russo One", sans-serif;
 }
 
-/*Footer*/
-footer {
-    background-color: #1C1F42;
-    color: white;
-    padding: 20px;
-    
+
+@media screen and (min-width: 768px){
+    .footer-content {
+        flex-direction: row;
+        
+    }
 }
+<<<<<<< HEAD
 
 footer p{
     text-align: center;
@@ -189,3 +182,5 @@ footer p{
 .social-icons img:hover {
     transform: scale(1.1);
 }
+=======
+>>>>>>> dc0eed1ad83144c7530ed8ae7b5b9a9fe98a0136

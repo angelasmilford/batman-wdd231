@@ -1,40 +1,8 @@
-let menubtn = document.querySelector(".menu");
-let topnav = document.querySelector(".topnav");
-let bar1 = document.querySelector(".bar1");
-let bar2 = document.querySelector(".bar2");
-let bar3 = document.querySelector(".bar3");
+import { initDarkMode } from './darkmode.js';
+import { initTopnav } from './hamburger.js';
+import { initFeedbackModal } from './feedbackModal.js';
+import { initFormSubmit } from './feedbackModal.js';
 
-function updateTopnavVisibility() {
-    if (window.innerWidth >= 800) {
-        topnav.style.display = "block";
-    } else {
-        topnav.style.display = "none";
-    }
-}
-
-menubtn.onclick = function () {
-    if (window.innerWidth < 800) {
-        if (topnav.style.display === "none" || topnav.style.display === "") {
-            topnav.style.display = "block";
-            bar1.style.marginLeft = "50px";  
-            bar3.style.marginLeft = "-50px";
-        } else {
-            topnav.style.display = "none";
-            bar1.style.marginLeft = ""; 
-            bar3.style.marginLeft = ""; 
-        }
-    }
-};
-
-window.onresize = function () {
-    if (window.innerWidth >= 800) {
-        bar1.style.marginLeft = ""; 
-        bar3.style.marginLeft = ""; 
-    };
-}
-
-updateTopnavVisibility();
-window.addEventListener('resize', updateTopnavVisibility);
 
 
 
@@ -129,8 +97,6 @@ const imageMap = {
 
 };
 
-
-
 //the code below fetches the characters from the api and displays them as divs in a UL
 //it also has a show all and show less button because there are 82 characters in total
 
@@ -186,55 +152,7 @@ function toggleCharacters() {
 
 fetchCharacters();
 
-let modal = document.querySelector(".feedback-modal");
-let btn = document.querySelector(".btn-modal");
-let closebtn = document.querySelector(".close-btn");
-
-btn.onclick = function () {
-    let currentDisplay = window.getComputedStyle(modal).display;
-    console.log("Current display:", currentDisplay);
-
-    if (currentDisplay === "none") {
-        modal.style.display = "block";
-    } else {
-        modal.style.display = "none";
-    }
-};
-
-closebtn.onclick = function () {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
-  
-
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.textContent = "☀️";
-    } else {
-        darkModeToggle.textContent = "🌙"; 
-    }
-  
-    darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-  
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-            darkModeToggle.textContent = "☀️"; 
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-            darkModeToggle.textContent = "🌙"; 
-        }
-    });
-  });
+window.toggleCharacters = toggleCharacters;
 
 
   function displayLastModified() {
@@ -242,4 +160,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('lastModified').textContent = lastModifiedDate; 
 }
 
+
 displayLastModified();
+initDarkMode();
+initTopnav();
+initFeedbackModal();
+document.addEventListener('DOMContentLoaded', () => {
+    initFormSubmit();
+  });
