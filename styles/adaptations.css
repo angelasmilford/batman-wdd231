@@ -1,81 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-color: silver;
-    font-family: "Oswald", sans-serif;
-}
-
-
-
-
-/*HEADER*/
-header img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1C1F42;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    font-size: 20px;
-    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-nav a:hover{
-    color: #FFCC33;
-    transform: scale(1.1);
-}
-
-
-
-#darkModeToggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 5px 10px;
-}
-
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-.dark-mode nav {
-    background-color: #3D3D3D;
-}
-
-.dark-mode nav a {
-    color: gold;
-}
-
-.dark-mode nav a:hover{
-    color: white;
-}
-
-
+@import "partials/footer.css";
+@import "partials/header.css";
+@import "partials/global.css";
+@import "partials/variables.css";
+@import "partials/home.css";
+@import "partials/dark-mode.css";
 
 
 /*MAIN*/
@@ -211,61 +139,13 @@ h1, h2{
 }
   
 
-
-
-
-/*Footer*/
-footer {
-    background-color: #1C1F42;
-    color: white;
-    padding: 20px;
-    
+@media screen and (min-width: 768px){
+    .footer-content {
+        flex-direction: row;
+        
+    }
 }
 
-footer p{
-    text-align: center;
-    font-size: 20px;
-
-}
-
-.dark-mode footer{
-    background-color: #3D3D3D;
-}
-
-.dark-mode footer p{
-    color: gold;
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distributes items across the row */
-    text-align: center;
-}
-
-.logo {
-    height: 50px;
-}
-
-.footer-text {
-    flex-grow: 1; /* Allows the text to expand and center itself */
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px; /* Adds space between icons */
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-}
 
 @media (max-width: 768px) { /* For tablets & phones */
     h1 {
@@ -277,22 +157,10 @@ footer p{
     #movies-container img, #shows-container img {
         width: 95%;
     }
+
 }
 
 @media (max-width: 480px) { /* For small phones */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    nav a{
-        color: white;
-    }
-    
 
     .show img{
         width: 100%;
