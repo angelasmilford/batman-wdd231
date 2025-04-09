@@ -1,15 +1,10 @@
-@import "partials/footer.css";
 @import "partials/header.css";
+@import "partials/footer.css";
 @import "partials/global.css";
 @import "partials/variables.css";
 @import "partials/home.css";
 @import "partials/dark-mode.css";
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 05c88e3f90f3f1ebeee2e8f749590de77236808d
 /*MAIN*/
 main{
     padding: 40px;
@@ -44,10 +39,7 @@ h2{
     max-width: 250px; 
 }
 
-.dark-mode .comic-item{
-    background: #3D3D3D;
-    border-color: #666;
-}
+
 
 .comic-image {
     width: 220px;
@@ -61,9 +53,6 @@ h2{
     font-size: 16px;
     line-height: 1.5;
 }
-.dark-mode .comic-item p{
-    color: white;
-}
 
 /*Fonts*/
 h1, h2{
@@ -76,8 +65,4 @@ h1, h2{
         flex-direction: row;
         
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 05c88e3f90f3f1ebeee2e8f749590de77236808d

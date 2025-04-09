@@ -3,8 +3,7 @@ import { initTopnav } from './hamburger.js';
 import { initFeedbackModal } from './feedbackModal.js';
 import { initFormSubmit } from './feedbackModal.js';
 
-
-
+document.addEventListener("DOMContentLoaded", function () {
 
     // Batman Comics Data
     const batmanComics = [
@@ -96,18 +95,9 @@ import { initFormSubmit } from './feedbackModal.js';
 
     displayComics(batmanComics);
 
-    
-    //FOOTER
-function displayLastModified() {
-    const lastModifiedDate = document.lastModified; 
-    document.getElementById('lastModified').textContent = lastModifiedDate; 
-}
-
-displayLastModified();
-initDarkMode();
-initTopnav();
-initFeedbackModal();
-document.addEventListener('DOMContentLoaded', () => {
-    initFormSubmit();
-  });
-
+    // Last Modified Date Footer
+    const lastModifiedEl = document.getElementById('lastModified');
+    if (lastModifiedEl) {
+        lastModifiedEl.textContent = document.lastModified;
+    }
+});
