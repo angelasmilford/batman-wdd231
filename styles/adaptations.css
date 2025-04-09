@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-@import "partials/header.css";
-@import "partials/dark-mode.css";
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-color: silver;
-    font-family: "Oswald", sans-serif;
-}
-
-
-
-=======
 @import "partials/footer.css";
 @import "partials/header.css";
 @import "partials/global.css";
@@ -22,7 +5,6 @@ body{
 @import "partials/home.css";
 @import "partials/dark-mode.css";
 
->>>>>>> dc0eed1ad83144c7530ed8ae7b5b9a9fe98a0136
 
 /*MAIN*/
 main {
@@ -148,45 +130,6 @@ h1, h2{
     }
 }
 
-<<<<<<< HEAD
-footer p{
-    text-align: center;
-    font-size: 20px;
-
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distributes items across the row */
-    text-align: center;
-}
-
-.logo {
-    height: 50px;
-}
-
-.footer-text {
-    flex-grow: 1; /* Allows the text to expand and center itself */
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px; /* Adds space between icons */
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-}
-=======
->>>>>>> dc0eed1ad83144c7530ed8ae7b5b9a9fe98a0136
 
 @media (max-width: 768px) { /* For tablets & phones */
     .btn-modal, #darkModeToggle{
