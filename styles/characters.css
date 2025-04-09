@@ -1,0 +1,81 @@
+@import "partials/footer.css";
+@import "partials/header.css";
+@import "partials/global.css";
+@import "partials/variables.css";
+@import "partials/home.css";
+@import "partials/dark-mode.css";
+
+
+.character img {
+    width: 60%;
+    max-width: 500px;
+    border: 3px solid darkgoldenrod;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.character {
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;;
+    padding: 20px;
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background: #FFCC33;
+    border: 3px solid darkgoldenrod;
+    max-width: 800px;
+    text-align: center;
+}
+
+.dark-mode .character h2 {
+    color:white;
+}
+
+.bat-signal {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://www.pngmart.com/files/23/Batman-Logo-PNG-Isolated-Image.png'); 
+    background-size: cover;
+    animation-name: fadeInOut;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    margin:auto;
+    
+}
+  
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+
+
+
+@media screen and (min-width: 800px){
+
+    .footer-content {
+        flex-direction: row;
+        
+    }
+
+    .feedback-content {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .feedback-form input,
+    .feedback-form select,
+    .feedback-form textarea {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+}
