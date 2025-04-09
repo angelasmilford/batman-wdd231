@@ -1,4 +1,4 @@
-import { toggleDarkMode } from "./darkMode.js";
+import { toggleDarkMode } from "./darkmode.js";
 import { toggleMenu } from "./hamburger.js";
 import { toggleFeedbackModal } from "./feedbackModal.js";
 

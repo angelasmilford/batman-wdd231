@@ -22,22 +22,22 @@ export function initFeedbackModal() {
         modal.style.display = "none";
       }
     };
-  }
+}
 
-  export function initFormSubmit() {
-    const thanks = document.querySelector(".thank-you");
-    const modal = document.querySelector(".feedback-modal");
-    const form = document.querySelector(".feedback-form"); 
+export function initFormSubmit() {
+  const thanks = document.querySelector(".thank-you");
+  const modal = document.querySelector(".feedback-modal");
+  const form = document.querySelector(".feedback-form"); 
   
-    if (!form || !thanks) return; 
+  if (!form || !thanks) return; 
   
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      modal.style.display = 'none';
-      thanks.classList.add('show');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    modal.style.display = 'none';
+    thanks.classList.add('show');
   
-      setTimeout(() => {
-        thanks.classList.remove('show');
-      }, 3000);
-    });
-  }
+    setTimeout(() => {
+      thanks.classList.remove('show');
+    }, 3000);
+  });
+}
