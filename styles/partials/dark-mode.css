@@ -28,7 +28,7 @@
 }
 
 .dark-mode footer {
-    background-color: #646464;
+    background-color: #3D3D3D;
     color: #e6e6e6;
 }
 
@@ -161,13 +161,13 @@ body.dark-mode {
     color:white;
 }
 
-
+/*Adaptations page*/
 .dark-mode{
     background: black;
     border-color: #666;
 }
 
-.dark-mode section {
+.dark-mode .visuals {
     background: #444;
     border-color: #666;
 }
@@ -178,5 +178,24 @@ body.dark-mode {
 }
 
 .dark-mode section p {
+    color: white;
+}
+
+body.dark-mode .show-more-btn {
+    color: white;
+    background: black;
+}
+
+body.dark-mode .show-more-btn:hover {
+    color: gold
+}
+
+/*Comics page*/
+.dark-mode .comic-item{
+    background: #3D3D3D;
+    border-color: #666;
+}
+
+.dark-mode .comic-item p{
     color: white;
 }

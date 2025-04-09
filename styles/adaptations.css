@@ -1,11 +1,14 @@
-@import "partials/footer.css";
-@import "partials/header.css";
+/*Partials*/
 @import "partials/global.css";
+@import "partials/dark-mode.css";
+@import "partials/header.css";
+@import "partials/footer.css";
 @import "partials/variables.css";
 @import "partials/home.css";
-@import "partials/dark-mode.css";
 
-<<<<<<< HEAD
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -16,8 +19,8 @@ body{
     font-family: "Oswald", sans-serif;
 }
 
-=======
->>>>>>> 05c88e3f90f3f1ebeee2e8f749590de77236808d
+
+
 
 /*MAIN*/
 main {
@@ -59,8 +62,9 @@ section h3{
 
 section p{
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
 }
+
 
 
 #movies-container, #shows-container {
@@ -79,9 +83,7 @@ section p{
     height: auto;
 }
 
-main p{
-    font-size: 15px;
-}
+
 
 /*Show More button*/
 .show-more-btn {
@@ -90,11 +92,10 @@ main p{
     margin: 1rem auto;
     padding: 0.5rem 1.5rem;
     font-size: 20px;
-    font-weight: bold;
     background: #1C1F42;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -103,19 +104,7 @@ main p{
     color: gold;
 }
 
-body.dark-mode .show-more-btn {
-    color: gold;
-    background: black;
-}
 
-body.dark-mode .show-more-btn:hover {
-    color: white
-}
-
-/*Fonts*/
-h1, h2{
-    font-family: "Russo One", sans-serif;
-}
 
 /*CSS animation*/
 .bat-signal {
@@ -139,6 +128,15 @@ h1, h2{
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+
+
+/*Fonts*/
+h1, h2{
+    font-family: "Russo One", sans-serif;
+}
+
+
   
 /*Media Query*/
 @media screen and (min-width: 768px){
@@ -148,10 +146,6 @@ h1, h2{
     }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 05c88e3f90f3f1ebeee2e8f749590de77236808d
 @media (max-width: 768px) { /* For tablets & phones */
     .btn-modal, #darkModeToggle{
         font-size: 25px;
@@ -179,7 +173,6 @@ h1, h2{
 }
 
 @media (max-width: 480px) { /* For small phones */
-
     .show img{
         width: 100%;
         height: auto;
