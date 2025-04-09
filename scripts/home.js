@@ -130,13 +130,15 @@ function renderCharacters(showAll) {
 
         const li = document.createElement('li');
         li.innerHTML = `
-            <img src="${imgSrc}" alt="${name}">
-            <div>
-                <em><strong>${name}<br> Alias: ${alias}</strong></em><br>
-                <strong>Role:</strong> ${role}<br>
-                <strong>Abilities:</strong> ${abilities.join(', ')}<br>
-                <strong>Description:</strong> ${description}
-            </div>
+            <a href="characters.html?name=${encodeURIComponent(name)}">
+                <img src="${imgSrc}" alt="${name}">
+                <div>
+                    <em><strong>${name}<br> Alias: ${alias}</strong></em><br>
+                    <strong>Role:</strong> ${role}<br>
+                    <strong>Abilities:</strong> ${abilities.join(', ')}<br>
+                    <strong>Description:</strong> ${description}
+                </div>
+            </a>
         `;
         list.appendChild(li);
     });

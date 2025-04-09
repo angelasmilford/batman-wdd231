@@ -121,7 +121,9 @@ body.dark-mode {
     border: 2px solid gray;
 }
 
-
+.dark-mode #character-list a {
+    color: white;
+}
 
 
 .dark-mode #toggle-btn {

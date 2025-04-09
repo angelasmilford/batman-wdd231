@@ -114,6 +114,11 @@
     transition: .2s;
 }
 
+#character-list a {
+    text-decoration: none;
+    color: black;
+    
+}
 
 .button-container {
     text-align: center;

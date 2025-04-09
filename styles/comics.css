@@ -5,6 +5,11 @@
 @import "partials/home.css";
 @import "partials/dark-mode.css";
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 05c88e3f90f3f1ebeee2e8f749590de77236808d
 /*MAIN*/
 main{
     padding: 40px;
@@ -71,4 +76,8 @@ h1, h2{
         flex-direction: row;
         
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 05c88e3f90f3f1ebeee2e8f749590de77236808d
