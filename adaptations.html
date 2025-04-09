@@ -7,12 +7,12 @@
     <meta name="author" content="Angela Milford">
         
     <!--Favicon-->
-    <link rel="icon" href="images/favicon.ico" type="image/favicon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <title>Adaptations of Batman</title>
 
     <link rel="stylesheet" href="styles/adaptations.css"> <!--CSS file-->
-    <script type = "module" src="scripts/adaptations.js" defer></script> <!--JS file-->
+    <script type ="module" src="scripts/adaptations.js" defer></script> <!--JS file-->
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,13 +42,12 @@
             <button id="darkModeToggle">🌙</button>
           </div>
         </ul>
-                
       </nav>
                 
       <div class = "feedback-modal">
         <div class = "feedback-content">
           <form class="feedback-form">
-            <button class = "close-btn">X</button>
+            <button class = "close-btn" aria-label="Close feedback form">X</button>
             
             <label for="name">Name:</label>
             
@@ -351,8 +350,8 @@
     <!--Footer content-->
     <footer>
       <div class="footer-content">
-        <img class="logo" src = "images/logo.webp" alt = "logo">
-              
+        <img id = "footer-logo" class="logo" src = "images/logo.webp" alt = "logo">
+        
         <p>Angela Milford & Hyrum Whittier<br>Last Updated: <span id="lastModified"></span></p>
               
         <div class="social-icons">
