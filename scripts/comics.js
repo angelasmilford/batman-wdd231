@@ -95,13 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     displayComics(batmanComics);
 
-    //FOOTER
-    // Last Modified Date Footer
-    const lastModifiedEl = document.getElementById('lastModified');
-    if (lastModifiedEl) {
-        lastModifiedEl.textContent = document.lastModified;
-    }
 });
+
+function displayLastModified() {
+    const lastModifiedDate = document.lastModified; 
+    document.getElementById('lastModified').textContent = lastModifiedDate; 
+}
+
 
 displayLastModified();
 initDarkMode();
@@ -109,4 +109,4 @@ initTopnav();
 initFeedbackModal();
 document.addEventListener('DOMContentLoaded', () => {
     initFormSubmit();
-});
+  });
