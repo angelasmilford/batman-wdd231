@@ -1,26 +1,35 @@
+/*Partials*/
+@import "partials/global.css";
+@import "partials/dark-mode.css";
 @import "partials/header.css";
 @import "partials/footer.css";
-@import "partials/global.css";
 @import "partials/variables.css";
 @import "partials/home.css";
-@import "partials/dark-mode.css";
+
+
+
 
 /*MAIN*/
 main{
     padding: 40px;
-
 }
+
+
 
 h1{
     text-align: center;
     font-size: 40px;
 }
 
+
+
 h2{
     text-align: center;
     padding: 25px;
     font-size: 25px;
 }
+
+
 
 #comics-container {
     display: grid;
@@ -39,8 +48,6 @@ h2{
     max-width: 250px; 
 }
 
-
-
 .comic-image {
     width: 220px;
     height: auto;
@@ -54,10 +61,6 @@ h2{
     line-height: 1.5;
 }
 
-/*Fonts*/
-h1, h2{
-    font-family: "Russo One", sans-serif;
-}
 
 
 @media screen and (min-width: 768px){

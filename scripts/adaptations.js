@@ -1,8 +1,8 @@
+//Partials
 import { initDarkMode } from './darkmode.js';
 import { initTopnav } from './hamburger.js';
 import { initFeedbackModal } from './feedbackModal.js';
 import { initFormSubmit } from './feedbackModal.js';
-
 
 
 

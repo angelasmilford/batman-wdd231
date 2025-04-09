@@ -4,7 +4,7 @@ import { initFeedbackModal } from './feedbackModal.js';
 import { initFormSubmit } from './feedbackModal.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-
+    //MAIN
     // Batman Comics Data
     const batmanComics = [
         {
@@ -95,9 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     displayComics(batmanComics);
 
+    //FOOTER
     // Last Modified Date Footer
     const lastModifiedEl = document.getElementById('lastModified');
     if (lastModifiedEl) {
         lastModifiedEl.textContent = document.lastModified;
     }
+});
+
+displayLastModified();
+initDarkMode();
+initTopnav();
+initFeedbackModal();
+document.addEventListener('DOMContentLoaded', () => {
+    initFormSubmit();
 });
