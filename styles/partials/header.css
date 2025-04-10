@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 header img {
-    width: 100%;
     object-fit: cover;
     display: block;
     margin-left: auto;
@@ -267,7 +264,6 @@ nav a:hover{
 }
 
 
->>>>>>> dc0eed1ad83144c7530ed8ae7b5b9a9fe98a0136
 header img {
     width: 100%;
     object-fit: cover;
@@ -449,4 +445,10 @@ nav a:hover{
         margin-left:auto;
         flex-direction: row;
     }
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> 73edacb4502902324f058b7296743f75e1a48f39
