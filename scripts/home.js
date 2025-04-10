@@ -12,22 +12,22 @@ import { initFormSubmit } from './feedbackModal.js';
 //webp images would probably be better, we might have to convert them
 
 const imageMap = {
-    "Pamela Isley": "images/poisonivy.png",
-    "Jonathan Crane": "images/scarecrow.png",
-    "Harvey Dent": "images/two-face.png",
-    "Bane": "images/bane.png",
-    "Stephanie Brown": "images/spoiler.png",
-    "Cassandra Cain": "images/orphan.png",
-    "Luke Fox": "images/batwing.png",
-    "Kate Kane": "images/batwoman.png",
-    "Clayface": "images/clayface.png",
-    "Holly Robinson": "images/hollyrobinson.png",
-    "Renee Montoya": "images/reneemontoya.png",
-    "Azrael": "images/azrael.png",
-    "Lady Shiva": "images/ladyshiva.png",
-    "Professor Pyg": "images/pyg.png",
-    "Hush": "images/hush.png",
-    "Hugo Strange": "images/hugostrange.png",
+    "Pamela Isley": "images/poisonivy.webp",
+    "Jonathan Crane": "images/scarecrow.webp",
+    "Harvey Dent": "images/two-face.webp",
+    "Bane": "images/bane.webp",
+    "Stephanie Brown": "images/spoiler.webp",
+    "Cassandra Cain": "images/orphan.webp",
+    "Luke Fox": "images/batwing.webp",
+    "Kate Kane": "images/batwoman.webp",
+    "Clayface": "images/clayface.webp",
+    "Holly Robinson": "images/hollyrobinson.webp",
+    "Renee Montoya": "images/reneemontoya.webp",
+    "Azrael": "images/azrael.webp",
+    "Lady Shiva": "images/ladyshiva.webp",
+    "Professor Pyg": "images/pyg.webp",
+    "Hush": "images/hush.webp",
+    "Hugo Strange": "images/hugostrange.webp",
     /*
     "Black Mask":"images/",
     "Firefly":"images/",
@@ -126,7 +126,7 @@ function renderCharacters(showAll) {
     
     charactersToShow.forEach(character => {
         const { name, alias, role, description, abilities } = character.attributes;
-        const imgSrc = imageMap[name] || 'images/placeholder.png';
+        const imgSrc = imageMap[name] || 'images/placeholder.webp';
 
         const li = document.createElement('li');
         li.innerHTML = `
